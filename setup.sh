@@ -20,7 +20,7 @@ fi
 if docker volume inspect laravel > /dev/null 2>&1; then
   echo "O volume laravel já existe"
 else
-  docker volume create --driver local --opt type=none --opt device=$(pwd)/laravel --opt o=bind laravel > /dev/null 2>&1;
+  docker volume create --driver local --opt type=none --opt device="$(pwd)"/laravel --opt o=bind laravel > /dev/null 2>&1;
   echo "O volume laravel foi criado"
 fi
 
