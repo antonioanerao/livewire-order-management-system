@@ -64,7 +64,6 @@ services:
 
 networks:
   proxy:
-    external: true
 
 volumes:
   mysql:
